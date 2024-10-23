@@ -10,12 +10,12 @@ const Comment = ({ comment }) => {
 	return (
 		<Flex gap={4}>
 			<Link to={`/${userProfile.username}`}>
-				<Avatar src={userProfile.profilePicURL} size={"sm"} />
+				<Avatar src={userProfile.profilePicURL} size={"md"} />
 			</Link>
 			<Flex direction={"column"}>
 				<Flex gap={2} alignItems={"center"}>
 					<Link to={`/${userProfile.username}`}>
-						<Text fontWeight={"600"} fontSize={12}>
+						<Text fontWeight={"600"} fontSize={16}>
 							{userProfile.username}
 						</Text>
 					</Link>

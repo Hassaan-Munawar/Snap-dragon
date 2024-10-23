@@ -24,9 +24,11 @@ const SuggestedUsers = () => {
 				</Flex>
 			)}
 
-			{suggestedUsers.map((user) => (
-				<SuggestedUser user={user} key={user.id} />
-			))}
+				{suggestedUsers.map((user) => (
+					<SuggestedUser user={user} key={user.id} />
+				))}
+			
+
 		</VStack>
 	);
 };
