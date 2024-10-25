@@ -10,7 +10,7 @@ const SuggestedUsers = () => {
 	if (isLoading) return null;
 
 	return (
-		<VStack position={"sticky"} top={0} py={8} px={6} gap={4}>
+		<VStack height={'100vh'} position={"sticky"} top={0} py={8} px={6} gap={4}>
 			<SuggestedHeader />
 
 			{suggestedUsers.length !== 0 && (
@@ -24,9 +24,13 @@ const SuggestedUsers = () => {
 				</Flex>
 			)}
 
-				{suggestedUsers.map((user) => (
+         <VStack h={'100%'} overflowY={'scroll'} gap={4}>
+		 {suggestedUsers.map((user) => (
 					<SuggestedUser user={user} key={user.id} />
 				))}
+
+		 </VStack>
+				
 			
 
 		</VStack>
