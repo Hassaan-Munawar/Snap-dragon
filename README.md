@@ -26,5 +26,3 @@ Every part of Snap Dragon has been optimized to deliver a smooth and visually ap
 
 🎯 The Challenge:
 Building Snap Dragon was a fantastic journey—balancing interactivity, responsiveness, and performance was key. I aimed to create a platform where user engagement is the focus, while maintaining a sleek, modern design that scales beautifully on any device. Firebase helped streamline the real-time data handling, making the app highly responsive and efficient. ⚡
-
-Check it out live here: https://lnkd.in/eMBk5CZs 🌍✨
