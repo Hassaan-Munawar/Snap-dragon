@@ -87,31 +87,31 @@ const ProfilePost = ({ post }) => {
 					zIndex={1}
 					justifyContent={"center"}
 				>
-					<Flex alignItems={"center"} justifyContent={"center"} gap={50}>
+					{/* <Flex alignItems={"center"} justifyContent={"center"} gap={50}>
 						<Flex>
-							<AiFillHeart size={20} />
+							<AiFillHeart color="pink" size={20} />
 							<Text fontWeight={500} ml={2}>
 								{post.likes.length}
 							</Text>
 						</Flex>
 
 						<Flex>
-							<FaComment size={20} />
+							<FaComment color="lightBlue" size={20} />
 							<Text fontWeight={500} ml={2}>
 								{post.comments.length}
 							</Text>
 						</Flex>
-					</Flex>
+					</Flex> */}
 				</Flex>
 
 				<Image src={post.imageURL} alt='profile post' w={"100%"} h={"100%"} objectFit={"cover"} />
 			</GridItem>
 
-			<Modal isOpen={isOpen} onClose={onClose} isCentered={true} size={{ base: "3xl", md: "5xl" }}>
+			<Modal borderRadius={'20px'} isOpen={isOpen} onClose={onClose} isCentered={true} size={{ base: "3xl", md: "5xl" }}>
 				<ModalOverlay />
 				<ModalContent>
 					<ModalCloseButton />
-					<ModalBody bg={"white"} pb={5}>
+					<ModalBody borderRadius={'10px'} bg={"white"} pb={5}>
 						<Flex
 							gap='4'
 							w={{ base: "90%", sm: "70%", md: "full" }}
@@ -128,7 +128,7 @@ const ProfilePost = ({ post }) => {
 								justifyContent={"center"}
 								alignItems={"center"}
 							>
-								<Image src={post.imageURL} alt='profile post' />
+								<Image borderRadius={'20px'} src={post.imageURL} alt='profile post' />
 							</Flex>
 							<Flex flex={1} flexDir={"column"} px={10} display={{ base: "none", md: "flex" }}>
 								<Flex alignItems={"center"} justifyContent={"space-between"}>

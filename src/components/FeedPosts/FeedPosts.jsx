@@ -25,12 +25,12 @@ const FeedPosts = () => {
 
 			{!isLoading && posts.length > 0 && posts.map((post) => <FeedPost key={post.id} post={post} />)}
 			{!isLoading && posts.length === 0 && (
-				<>
+				<Flex height={'80vh'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}>
 					<Text textAlign={"center"} fontSize={"md"}>
 						Ohh.. Looks like you don&apos;t have any friends.
 					</Text>
 					<Text textAlign={"center"}>Go make some!!</Text>
-				</>
+				</Flex>
 			)}
 		</Container>
 	);

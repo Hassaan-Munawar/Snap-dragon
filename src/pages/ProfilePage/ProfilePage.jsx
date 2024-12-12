@@ -14,8 +14,8 @@ const ProfilePage = () => {
 	if (userNotFound) return <UserNotFound />;
 
 	return (
-		<Container maxW='container.lg' py={5}>
-			<Flex py={10} px={4} pl={{ base: 4, md: 10 }} w={"full"} mx={"auto"} flexDirection={"column"}>
+		<Container overflowY={'hidden'} maxW='container.lg'>
+			<Flex px={4} pl={{ base: 4, md: 10 }} w={"full"} mx={"auto"} flexDirection={"column"}>
 				{!isLoading && userProfile && <ProfileHeader />}
 				{isLoading && <ProfileHeaderSkeleton />}
 			</Flex>
@@ -58,7 +58,7 @@ const ProfileHeaderSkeleton = () => {
 
 const UserNotFound = () => {
 	return (
-		<Flex flexDir='column' textAlign={"center"} mx={"auto"}>
+		<Flex height={'100vh'} flexDir='column'alignItems={'center'} justifyContent={'center'}>
 			<Text fontSize={"2xl"}>User Not Found</Text>
 			<Link as={RouterLink} to={"/"} color={"blue.500"} w={"max-content"} mx={"auto"}>
 				Go home
