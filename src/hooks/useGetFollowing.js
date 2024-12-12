@@ -14,7 +14,7 @@ const useGetFollowing = () => {
     const getFollowing = async () => {
       setIsLoading(true);
       try {
-        if (!authUser || !authUser.followers || authUser.followers.length === 0) {
+        if (!authUser || !authUser.following || authUser.following.length === 0) {
           setFollowing([]);
           return;
         }
@@ -22,7 +22,7 @@ const useGetFollowing = () => {
         const usersRef = collection(firestore, "users");
         const q = query(
           usersRef,
-          where("uid", "in", authUser.followers)
+          where("uid", "in", authUser.following)
         );
 
         const querySnapshot = await getDocs(q);
@@ -47,3 +47,4 @@ const useGetFollowing = () => {
 };
 
 export default useGetFollowing;
+

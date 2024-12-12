@@ -1,10 +1,6 @@
 import { Box, Flex, Text, Tooltip, VStack } from "@chakra-ui/react";
 import { NotificationsLogo } from "../../assets/constants";
 import {
-
-	Button,
-	CloseButton,
-	Image,
 	Modal,
 	ModalBody,
 	ModalCloseButton,
@@ -24,7 +20,7 @@ import useGetFollowing from "../../hooks/useGetFollowing";
 const Connections = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [value, setValue] = useState('followers')
-	const { isLoading, suggestedUsers } = useGetSuggestedUsers();
+	const { suggestedUsers } = useGetSuggestedUsers();
 	const {  followers } = useGetFollowers();
 	const {following} = useGetFollowing()
 
@@ -67,7 +63,7 @@ const Connections = () => {
 							textTransform={"uppercase"}
 							fontWeight={"bold"}
 						>
-							<Flex onClick={() => setValue('following')} borderTop={`${value == 'following' ? '1px solid black' : 'none'}`} alignItems={"center"} p='3' gap={1} cursor={"pointer"}>
+							<Flex onClick={() => setValue('followers')} borderTop={`${value == 'followers' ? '1px solid black' : 'none'}`} alignItems={"center"} p='3' gap={1} cursor={"pointer"}>
 								<Box fontSize={20}>
 									<BsBookmark />
 								</Box>
@@ -76,7 +72,7 @@ const Connections = () => {
 								</Text>
 							</Flex>
 
-							<Flex onClick={() => setValue('followers')} borderTop={`${value == 'followers' ? '1px solid black' : 'none'}`} alignItems={"center"} p='3' gap={1} cursor={"pointer"}>
+							<Flex onClick={() => setValue('following')} borderTop={`${value == 'following' ? '1px solid black' : 'none'}`} alignItems={"center"} p='3' gap={1} cursor={"pointer"}>
 								<Box fontSize={20}>
 									<BsGrid3X3 />
 								</Box>

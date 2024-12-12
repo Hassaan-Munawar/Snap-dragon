@@ -128,7 +128,7 @@ const ProfilePost = ({ post }) => {
 								justifyContent={"center"}
 								alignItems={"center"}
 							>
-								<Image borderRadius={'20px'} src={post.imageURL} alt='profile post' />
+								<Image borderRadius={'10px'} src={post.imageURL} alt='profile post' />
 							</Flex>
 							<Flex flex={1} flexDir={"column"} px={10} display={{ base: "none", md: "flex" }}>
 								<Flex alignItems={"center"} justifyContent={"space-between"}>
@@ -143,7 +143,7 @@ const ProfilePost = ({ post }) => {
 										<Button
 											size={"sm"}
 											color={"red.600"}
-											bg={"whiteAlpha.300"}
+											bg={"red.100"}
 											_hover={{ bg: "blackAlpha.300", color: "red.600" }}
 											borderRadius={4}
 											p={1}
