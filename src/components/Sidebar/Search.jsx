@@ -26,7 +26,7 @@ const Search = () => {
 
 	const handleSearchUser = (e) => {
 		e.preventDefault();
-		getUserProfile(searchRef.current.value);
+		getUserProfile(searchRef.current.value.toLowerCase().trim());
 	};
 
 	return (
@@ -54,7 +54,7 @@ const Search = () => {
 				</Flex>
 			</Tooltip>
 
-			<Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft'>
+			<Modal isOpen={isOpen} isCentered={true} onClose={onClose} motionPreset='slideInLeft'>
 				<ModalOverlay />
 				<ModalContent bg={"white"} border={"1px solid gray"} maxW={"400px"}>
 					<ModalHeader>Search user</ModalHeader>

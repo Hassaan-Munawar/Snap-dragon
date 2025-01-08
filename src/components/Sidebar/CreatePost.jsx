@@ -74,7 +74,7 @@ const CreatePost = () => {
 				</Flex>
 			</Tooltip>
 
-			<Modal isOpen={isOpen} onClose={onClose} size='xl'>
+			<Modal isOpen={isOpen} isCentered={true} onClose={onClose} size='xl'>
 				<ModalOverlay />
 
 				<ModalContent bg={"white"} border={"1px solid gray"}>

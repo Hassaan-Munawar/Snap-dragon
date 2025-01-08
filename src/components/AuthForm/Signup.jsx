@@ -18,7 +18,7 @@ const Signup = () => {
 			<Input
 				borderBottom={'2px solid gray'}
 				_hover={{ borderColor: 'none' }}
-				_focus={{ border:'2px solid #DF1734' }}
+				_focus={{ borderWidth:'2px' }}
 				_placeholder={{ color: 'gray.400' }}
 				width={"100%"}
 				size={"md"}
@@ -26,12 +26,12 @@ const Signup = () => {
 				type='email'
 				placeholder='Email'
 				value={inputs.email}
-				onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
+				onChange={(e) => setInputs({ ...inputs, email: e.target.value.trim().toLowerCase() })}
 			/>
 			<Input
 				borderBottom={'2px solid gray'}
 				_hover={{ borderColor: 'none' }}
-				_focus={{ border:'2px solid #DF1734' }}
+				_focus={{ borderWidth:'2px' }}
 				_placeholder={{ color: 'gray.400' }}
 				width={"100%"}
 				size={"md"}
@@ -39,12 +39,12 @@ const Signup = () => {
 				type='text'
 				placeholder='Username'
 				value={inputs.username}
-				onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
+				onChange={(e) => setInputs({ ...inputs, username: e.target.value.trim().toLowerCase() })}
 			/>
 			<Input
 				borderBottom={'2px solid gray'}
 				_hover={{ borderColor: 'none' }}
-				_focus={{ border:'2px solid #DF1734' }}
+				_focus={{ borderWidth:'2px' }}
 				_placeholder={{ color: 'gray.400' }}
 				width={"100%"}
 				size={"md"}
@@ -59,7 +59,7 @@ const Signup = () => {
 				<Input
 					borderBottom={'2px solid gray'}
 					_hover={{ borderColor: 'none' }}
-					_focus={{ border:'2px solid #DF1734' }}
+					_focus={{ borderWidth:'2px' }}
 					_placeholder={{ color: 'gray.400' }}
 					width={"100%"}
 					size={"md"}
@@ -67,7 +67,7 @@ const Signup = () => {
 					placeholder='Password'
 					type={showPassword ? "text" : "password"}
 					value={inputs.password}
-					onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
+					onChange={(e) => setInputs({ ...inputs, password: e.target.value.trim().toLowerCase() })}
 				/>
 				<InputRightElement h='full'>
 					<Button variant={"ghost"} size={"sm"} onClick={() => setShowPassword(!showPassword)}>

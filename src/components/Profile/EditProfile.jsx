@@ -98,7 +98,7 @@ const EditProfile = ({ isOpen, onClose }) => {
 										size={"sm"}
 										type={"text"}
 										value={inputs.username || authUser.username}
-										onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
+										onChange={(e) => setInputs({ ...inputs, username: e.target.value.trim().toLowerCase() })}
 									/>
 								</FormControl>
 
